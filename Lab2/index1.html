@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>พื้นฐาน HTML - Lecture 02</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin-right: 20px;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        ul, ol {
+            margin: 20px;
+            padding-left: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>การเรียนรู้พื้นฐาน HTML</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#section1">หัวข้อ 1</a>
+        <a href="#section2">หัวข้อ 2</a>
+        <a href="#section3">หัวข้อ 3</a>
+        <a href="#section4">ฟอร์ม</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Section 1 -->
+        <section id="section1">
+            <h2>หัวข้อที่ 1: การใช้ Heading Tag</h2>
+            <p>ใน HTML เราสามารถใช้ <code>&lt;h1&gt;</code> ถึง <code>&lt;h6&gt;</code> เพื่อสร้างหัวข้อในหน้าเว็บ.</p>
+            <h1>หัวข้อหลัก (h1)</h1>
+            <h2>หัวข้อรอง (h2)</h2>
+            <h3>หัวข้อที่ 3 (h3)</h3>
+            <h4>หัวข้อที่ 4 (h4)</h4>
+            <h5>หัวข้อที่ 5 (h5)</h5>
+            <h6>หัวข้อที่ 6 (h6)</h6>
+        </section>
+
+        <!-- Section 2 -->
+        <section id="section2">
+            <h2>หัวข้อที่ 2: การใช้ Paragraph และ Link</h2>
+            <p>การใช้ <code>&lt;p&gt;</code> เพื่อแสดงข้อความในย่อหน้า และ <code>&lt;a&gt;</code> สำหรับสร้างลิงก์.</p>
+            <p>เรียนรู้เพิ่มเติมเกี่ยวกับ <a href="https://www.w3schools.com/html/">HTML ที่ W3Schools</a></p>
+        </section>
+
+        <!-- Section 3 -->
+        <section id="section3">
+            <h2>หัวข้อที่ 3: การใช้ List</h2>
+            <p>ใน HTML เราสามารถใช้ <code>&lt;ul&gt;</code> สำหรับรายการที่ไม่มีลำดับ และ <code>&lt;ol&gt;</code> สำหรับรายการที่มีลำดับ.</p>
+            <h3>รายการที่ไม่มีลำดับ (Unordered List)</h3>
+            <ul>
+                <li>รายการ 1</li>
+                <li>รายการ 2</li>
+                <li>รายการ 3</li>
+            </ul>
+
+            <h3>รายการที่มีลำดับ (Ordered List)</h3>
+            <ol>
+                <li>ขั้นตอนที่ 1</li>
+                <li>ขั้นตอนที่ 2</li>
+                <li>ขั้นตอนที่ 3</li>
+            </ol>
+        </section>
+
+        <!-- Section 4 -->
+        <section id="section4">
+            <h2>ฟอร์ม</h2>
+            <p>การสร้างฟอร์มใน HTML โดยใช้ <code>&lt;form&gt;</code> และ <code>&lt;input&gt;</code> tags.</p>
+
+            <form action="/submit_form" method="post">
+                <label for="fname">ชื่อ:</label>
+                <input type="text" id="fname" name="fname" placeholder="กรอกชื่อของคุณ">
+
+                <label for="email">อีเมล:</label>
+                <input type="email" id="email" name="email" placeholder="กรอกอีเมล">
+
+                <label for="password">รหัสผ่าน:</label>
+                <input type="password" id="password" name="password" placeholder="กรอกรหัสผ่าน">
+
+                <label for="message">ข้อความ:</label>
+                <textarea id="message" name="message" rows="4" placeholder="กรอกข้อความของคุณ"></textarea>
+
+                <input type="submit" value="ส่งข้อมูล">
+            </form>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
